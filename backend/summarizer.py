@@ -3,8 +3,8 @@ from dotenv import load_dotenv
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough, RunnableLambda
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from extract_video_id import extract_youtube_video_id
-from vector_store import store_transcript, db
+from backend.extract_video_id import extract_youtube_video_id
+from backend.vector_store import store_transcript, db
 load_dotenv()
 
 llm = ChatOpenAI(model = "gpt-4o-mini")

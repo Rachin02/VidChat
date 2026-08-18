@@ -2,8 +2,8 @@ from fastapi import FastAPI, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
-from summarizer import store_transcript_information, talk_with_ai
-from vector_store import delete_history
+from backend.summarizer import store_transcript_information, talk_with_ai
+from backend.vector_store import delete_history
 
 class Get_url(BaseModel):
     url : str
