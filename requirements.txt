@@ -1,0 +1,12 @@
+fastapi
+langchain
+langchain-astradb
+langchain-openai
+langchain-community
+langchain-groq
+youtube-transcript-api
+pytube
+python-dotenv
+langchain-chroma
+langchain-astradb
+python-multipart
