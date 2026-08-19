@@ -1,4 +1,6 @@
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_groq import ChatGroq
+from langchain_huggingface import HuggingFaceEmbeddings
 from dotenv import load_dotenv
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough, RunnableLambda
 from langchain_core.prompts import PromptTemplate
@@ -7,8 +9,9 @@ from backend.extract_video_id import extract_youtube_video_id
 from backend.vector_store import store_transcript, db
 load_dotenv()
 
-llm = ChatOpenAI(model = "gpt-4o-mini")
-embedding = OpenAIEmbeddings(model = "text-embedding-3-large")
+llm = ChatGroq(model = "openai/gpt-oss-20b")
+embedding = HuggingFaceEmbeddings(model_name="BAAI/bge-small-en")
+
 
 prompt = PromptTemplate(
     template= """You are an AI assistant that answers questions about a YouTube video.

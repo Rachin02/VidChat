@@ -2,15 +2,16 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 from langchain_astradb import AstraDBVectorStore
-
+from langchain_huggingface import HuggingFaceEmbeddings
+ 
 from dotenv import load_dotenv
 import os
 load_dotenv()
 
-embedding = OpenAIEmbeddings(model = "text-embedding-3-large")
+embedding = HuggingFaceEmbeddings(model_name="BAAI/bge-small-en")
 token = os.getenv("ASTRA_DB_APPLICATION_TOKEN")
 endpoint = os.getenv("ASTRA_DB_API_ENDPOINT")
-
+# "llama-3.1-8b-instant"
 
 db = AstraDBVectorStore(
         embedding = embedding,

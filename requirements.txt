@@ -10,3 +10,8 @@ python-dotenv
 langchain-chroma
 langchain-astradb
 python-multipart
+
+langchain-groq
+langchain-huggingface
+langchain-openrouter
+sentence-transformers
