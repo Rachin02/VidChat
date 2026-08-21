@@ -24,11 +24,11 @@ The project uses **LangChain, FastAPI, vector search, embeddings, and LLMs** to 
 
 ### Video Analysis
 
-![VidChat Result](images/video_analysis.png)
+![VidChat Result](images/AI_ask.png)
 
 ### AI Chat
 
-![VidChat Chat](images/AI_ask.png)
+![VidChat Chat](images/video_analysis.png)
 
 
 
